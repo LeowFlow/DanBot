@@ -1,5 +1,6 @@
 const fs = require("fs");
-module.exports = async (client, message, guild) => {
+module.exports = async (client, message, guild) => { 
+  require("../events/messageleaderboard")(client); 
   const sql = require('sqlite3');
   const db = new sql.Database('./database.db');
   if (message.author.bot) return;
