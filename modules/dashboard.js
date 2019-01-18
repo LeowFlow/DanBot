@@ -98,7 +98,7 @@ module.exports = (client) => {
   // Here we check if the user was already on the page and redirect them
   // there, mostly.
   app.get("/callback", passport.authenticate("discord", { failureRedirect: "/autherror" }), (req, res) => {
-    if (req.user.id === client.config.ownerID) {
+    if (req.user.id === client.appInfo.owner.id) {
       req.session.isAdmin = true;
     } else {
       req.session.isAdmin = false;
