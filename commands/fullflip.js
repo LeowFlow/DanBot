@@ -7,7 +7,7 @@ exports.run = async (client, message) => {
                         setTimeout(() => {
                             ms.edit("(╯°□°)╯    ]").then(ms => {
                                 setTimeout(() => {
-                                    ms.edit("(°-°)\\ ┬─┬")
+                                     ms.edit("(°-°)\\ ┬─┬")
                                 }, 500);
                             });
                         }, 500);
