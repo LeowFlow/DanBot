@@ -2,3 +2,5 @@ node_modules
 .git
 gitpush.sh
 data
+package-lock.json
+database.db
