@@ -1,5 +1,6 @@
 const fs = require("fs");
 module.exports = async (client, message, guild) => { 
+  //message leaderobard stuff 
   let mlb = JSON.parse(fs.readFileSync("./datajsons/messageleaderboard.json", "utf8"));
   // Note for Dan: mlb = messageleaderboard this line ^^ will import the leaderboard 
   if(!mlb[message.author.username]){//this will give us the name, if u want to use the name and the id in the leaderboard(dashboard) msg me ill have to change that line.
@@ -12,6 +13,7 @@ module.exports = async (client, message, guild) => {
   fs.writeFile("./datajsons/messageleaderboard.json", JSON.stringify(mlb), (err) => {
    if (err) console.log(err)
  });
+ //END
   const sql = require('sqlite3');
   const db = new sql.Database('./database.db');
   if (message.author.bot) return;
