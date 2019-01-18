@@ -126,19 +126,12 @@ module.exports = (client) => {
   app.get("/autherror", (req, res) => {
     renderTemplate(res, req, "autherror.ejs");
   });
-
-  // Destroys the session to log out the user.
   app.get("/logout", function(req, res) {
     req.session.destroy(() => {
       req.logout();
-      res.redirect("/"); //Inside a callback… bulletproof!
+      res.redirect("/");
     });
   });
-
-  /** REGULAR INFORMATION PAGES */
-
-  // Index page. If the user is authenticated, it shows their info
-  // at the top right of the screen.
   app.get("/", (req, res) => {
     const guilds = client.guilds.size;
     const members = client.guilds.reduce((p, c) => p + c.memberCount, 0);
