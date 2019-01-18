@@ -10,7 +10,7 @@ exports.run = async (client, message, args, level) => {
     } catch (err) {
       message.channel.send(`\`ERROR\` \`\`\`xl\n${await client.clean(client, err)}\n\`\`\``);
     }
-  };
+  }; 
   
   exports.conf = {
     enabled: true,
