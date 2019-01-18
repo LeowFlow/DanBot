@@ -1,3 +1,4 @@
+const fs = require("fs");
 exports.run = async (client, message, args, level) => {
     let mlb = JSON.parse(fs.readFileSync("./datajsons/messageleaderboard.json", "utf8"));
     message.author.send({
