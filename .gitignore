@@ -4,3 +4,4 @@ gitpush.sh
 data
 package-lock.json
 database.db
+datajsons/commandsruns.json
