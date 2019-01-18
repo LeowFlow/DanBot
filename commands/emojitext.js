@@ -18,7 +18,7 @@ module.exports.run = async (client, message, args) => {
     if (returnMessage.length > 2000) return errors.other(message, "Message is too long (over 2000 characters)");
 
     message.delete();
-    message.channel.send(returnMessage);
+    message.channel.send(returnMessage); 
 }
 
 exports.conf = {
