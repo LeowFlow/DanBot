@@ -42,4 +42,4 @@ const init = async () => {
 //Logs In With Token
   client.login(client.config.token);
 };
-
+init();
