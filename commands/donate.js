@@ -16,7 +16,7 @@ And you will be on \`!donators\`
 			color: 0xFFFFFF
 		}
 	});
-	message.channel.send(":white_check_mark: I have sent my donation information to you through Direct Messages.");
+	message.channel.send(":white_check_mark: I have sent my donation information to you through Direct Messages.").then(x => x.delete(10000))
 };
 
               exports.conf = {
