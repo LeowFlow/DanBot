@@ -1,0 +1,16 @@
+<%- include('blocks/header', {bot, user, path}) %>
+<div class="container">
+  <div class="jumbotron">
+      <meta name="description" content="DanBot is the best discord bot for music and moderation commands with dashboard">
+    <div>
+      <h4>DanBot is on <%= indexstats.servers %> servers and is watching over <%= indexstats.members %> members!</h4>
+      <h5>DanBot is a multi-purpose bot, DanBot has: Music commands, Moderator commands, Fun commands + tons more.</h5>
+      <h5>You can set your own prefix, welcome message, log channel, poll channel, admin + mod roles using the !settings command.</h5>
+      <h5>New updates are here every few hours.</h5>
+      <h5>We have a web dashboard just click the navbar-toggle button for a bunch of things.</h5>
+      <h5>You can login and manage users, settings and a few other things.</h5>
+      <h5>or click the button below to view all commands and how to use them. </h5>
+      <p><a class="btn btn-primary" href="/commands" role="button">Command Help »</a></p>
+    </div>
+  </div>
+<% include ./blocks/footer %>
