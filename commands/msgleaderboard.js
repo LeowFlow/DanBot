@@ -4,7 +4,7 @@ exports.run = async (client, message, args, level) => {
     message.author.send({
 		embed: {
 			author: { name: `DanBot's Message LeaderBoard!` },
-			description: `${mlb.msgs}`,
+			description: `${mlb[message.author.id].msgs}`,
 			color: 0xFFFFFF
 		}
 	});
