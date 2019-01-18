@@ -9,7 +9,7 @@ exports.run = (client, message, args) => {
     });
 }
 
-exports.conf = {
+exports.conf = { 
   enabled: true,
   guildOnly: false,
   aliases: [],
