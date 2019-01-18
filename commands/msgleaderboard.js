@@ -17,8 +17,8 @@ exports.run = async (client, message, args, level) => {
     };
     
     exports.help = {
-      name: "eval",
+      name: "leaderboard",
       category: "Bot Staff Commands",
-      description: "Runs what ever i want it to",
-      usage: "eval [...code]"
+      description: "IDK DAN DO THAT",
+      usage: "leaderboard"
     };
