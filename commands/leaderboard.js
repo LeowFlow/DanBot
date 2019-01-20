@@ -1,6 +1,6 @@
 const fs = require("fs");
+let mlb = JSON.parse(fs.readFileSync("./datajsons/messageleaderboard.json", "utf8"));
 exports.run = async (client, message, args, level) => {
-  let mlb = JSON.parse(fs.readFileSync("./datajsons/messageleaderboard.json", "utf8"));
     message.channel.send({
 		embed: {
 			author: { name: `DanBot's Message LeaderBoard!` },
