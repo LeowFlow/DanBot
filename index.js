@@ -3,6 +3,7 @@ const { promisify } = require("util");
 const readdir = promisify(require("fs").readdir);
 const Enmap = require("enmap");
 const client = new Discord.Client();
+const fs = require('fs');
 client.config = require("../config.js");
 client.logger = require("./modules/Logger");
 require("./modules/functions.js")(client);
