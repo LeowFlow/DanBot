@@ -1,11 +1,12 @@
 const fs = require("fs");
+const Discord = require("discord.js");
 let mlb = JSON.parse(fs.readFileSync("./datajsons/messageleaderboard.json", "utf8"));
 exports.run = async (client, message, args, level) => {
     message.channel.send("", {
-      embed: new Discord.RichEmbed;
-      .setTitle("This is the leaderboard command (W.I.P.)")
-      .setDescription(mlb[message.author.id].msgs)
-    });
+      embed: new Discord.RichEmbed()
+      .setTitle("LeaderBoard-W.I.P.")
+      .setDescription("urgay")
+    })
   }
     exports.conf = {
       enabled: true,
