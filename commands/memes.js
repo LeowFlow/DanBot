@@ -11,3 +11,16 @@ module.exports.run = async (client, message, args) => {
     searchMessage.edit({embed});
   })
 }
+
+exports.conf = {
+    enabled: true,
+    guildOnly: true,
+    aliases: [],
+    permLevel: "User"
+  };
+  exports.help = {
+    name: "memes",
+    category: "Fun Commands",
+    description: "Memes. I don't know what else to put here :eyes:",
+    usage: "memes"
+  };

@@ -37,6 +37,7 @@
     "marked": "^0.5.2",
     "math-expression-evaluator": "^1.2.17",
     "mem-stat": "^1.0.5",
+    "memejs": "^1.0.7",
     "moment": "^2.22.2",
     "moment-duration-format": "^2.2.2",
     "mongoose": "^5.3.12",
