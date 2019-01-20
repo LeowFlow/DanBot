@@ -13,7 +13,6 @@ client.settings = new Enmap({name: "settings"});
 //Case Numbers
 const sql = require("sqlite3")
 const db = new sql.Database('./database.db');
-// dan is gay :P  (Hadi was here)
 //Loads Commands 
 const init = async () => {
   const cmdFiles = await readdir("./commands/");
