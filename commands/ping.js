@@ -17,7 +17,7 @@ exports.run = async (client, message, args, color) => {
     ctx.fillStyle = '#ffffff';
     ctx.fillText('Pong,', canvas.width / 2.5, canvas.height / 3.5);
   
-    ctx.applyText(canvas, `Latency: ${new Date().getTime() - message.createdTimestamp} ms`);
+    ctx.font.basic = applyText(canvas, `Latency: ${new Date().getTime() - message.createdTimestamp} ms`);
     ctx.fillStyle = '#ffffff';
     ctx.fillText(`API: ${API}ms`, canvas.width / 2.5, canvas.height / 1.8);
   
