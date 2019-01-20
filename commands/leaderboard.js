@@ -2,7 +2,7 @@ const fs = require("fs");
 exports.run = async (client, message, args, level) => {
   let coins = JSON.parse(fs.readFileSync("./datajsons/coins.json", "utf8"));
   let Coinss = coins[message.author.id].coins;
-    message.author.send({
+    message.channel.send({
 		embed: {
 			author: { name: `DanBot's Message LeaderBoard!` },
 			description: `${mlb[message.author.username].coins}`,
@@ -15,7 +15,7 @@ exports.run = async (client, message, args, level) => {
       enabled: true,
       guildOnly: false,
       aliases: [],
-      permLevel: "Bot Admin"
+      permLevel: "User"
     };
     
     exports.help = {
