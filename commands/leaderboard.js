@@ -5,7 +5,7 @@ exports.run = async (client, message, args, level) => {
   let msgss = mlb[message.author.id].msgs;
     message.channel.send("", {
       embed: new Discord.RichEmbed()
-      .setTitle("LeaderBoard-W.I.P.")
+      .setTitle("LeaderBoard   (W.I.P.)")
       .setDescription(message.author.username+"\n"+msgss)
     })
   }
