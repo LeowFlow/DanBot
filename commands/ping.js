@@ -28,7 +28,7 @@ exports.run = async (client, message, args, color, member) => {
     ctx.closePath();
     ctx.clip();
   
-    const { body: buffer } = await snekfetch.get(member.user.displayAvatarURL);
+    const { body: buffer } = await snekfetch.get("https://cdn.danbot.xyz/DanBot.png");
     const avatar = await Canvas.loadImage(buffer);
     ctx.drawImage(avatar, 25, 25, 200, 200);
   
