@@ -2,20 +2,10 @@ const Discord = require("discord.js");
 const ping = require('node-http-ping')
 var datetime = require('node-datetime');
 const Canvas = require('canvas')
-exports.run = async (client, message, args, color) => {
-  let start = message.channel.send(':ping_pong:').then(message => {
-    message.delete();
-    let API = (client.ping).toFixed(2)
-    let embed = new Discord.RichEmbed()
-    .setTitle(`:ping_pong: Pong!`)
-    .setColor(color)
-    .addField("Latency", (new Date().getTime() - message.createdTimestamp) + ' ms', true)
-    .addField("API", `${API}ms`, true)
-    message.channel.send(embed);
-
+exports.run = async(client, message, args, color) => {
     const canvas = Canvas.createCanvas(700, 250);
     const ctx = canvas.getContext('2d');
-    const background = await Canvas.loadImage('../images/background.jpg');
+    const background = await Canvas.loadImage('./images/background.jpg');
     ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
   
     ctx.strokeStyle = '#74037b';
@@ -34,14 +24,13 @@ exports.run = async (client, message, args, color) => {
     ctx.closePath();
     ctx.clip();
   
-    const { body: buffer } = await snekfetch.get(member.user.displayAvatarURL);
-    const avatar = await Canvas.loadImage(buffer);
+    const { body: buffer } = snekfetch.get(member.user.displayAvatarURL);
+    const avatar = Canvas.loadImage(buffer);
     ctx.drawImage(avatar, 25, 25, 200, 200);
   
     const attachment = new Discord.Attachment(canvas.toBuffer(), 'PONG.png');
   
     channel.send(`PONG!!`, attachment);  
-  });
 };exports.conf = {
     enabled: true,
     guildOnly: true,
