@@ -17,10 +17,9 @@ exports.run = async (client, message, args, color, member) => {
     ctx.font = '28px sans-serif';
     const fonts = ctx.font = '28px sans-serif';
     ctx.fillStyle = '#ffffff';
-  
-    ctx.fillText(canvas, `Latency: ${new Date().getTime() - message.createdTimestamp} ms`);
+    ctx.fillText(`Latency: ${new Date().getTime() - message.createdTimestamp} ms`, canvas.width / 2.5, canvas.height / 3.5);
     ctx.fillStyle = '#ffffff';
-    ctx.fillText(`API: ${API}ms \n \n Latency: ${new Date().getTime() - message.createdTimestamp} ms`, canvas.width / 2.5, canvas.height / 1.8);
+    ctx.fillText(`\n \nAPI: ${API}ms`, canvas.width / 2.5, canvas.height / 1.8);
   
     ctx.beginPath();
     ctx.arc(125, 125, 100, 0, Math.PI * 2, true);
