@@ -5,7 +5,7 @@ exports.run = async (client, message, args, level) => {
     message.channel.send("", {
       embed: new Discord.RichEmbed()
       .setTitle("LeaderBoard-W.I.P.")
-      .setDescription("urgay")
+      .setDescription(mlb[message.author.id].msgs)
     })
   }
     exports.conf = {
