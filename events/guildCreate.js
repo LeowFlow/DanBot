@@ -7,10 +7,10 @@ module.exports = (client, guild) => {
     .setColor("#53f23e")
     .setThumbnail(Servericon)
     .addField("__**Name:**__", `${guild.name}`)
-    .addField("__**Owner:**__", `${guild.owner} [${guild.owner.user.tag}]`)
+    .addField("__**Owner:**__", `${guild.owner}`)
     .addField("__**Members:**__", `${guild.memberCount}`)
-    .addField("__**Total Members (All Servers):**__", `${bot.guilds.size} servers`)
-    .setFooter(`ID: ${guild.id}`)
+    .addField("__**Total Members (All Servers):**__", `${client.guilds.size} servers`)
+    .setFooter(`The Guilds ID: ${guild.id}`)
     .setTimestamp();
     client.channels.get("536398920348073994").send(guildEmbed);
 
