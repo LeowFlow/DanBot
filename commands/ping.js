@@ -19,7 +19,7 @@ exports.run = async (client, message, args, color, member) => {
     ctx.fillStyle = '#ffffff';
     ctx.fillText(`Latency: ${new Date().getTime() - message.createdTimestamp} ms`, canvas.width / 2.5, canvas.height / 3.5);
     ctx.fillStyle = '#ffffff';
-    ctx.fillText(`\n \nAPI: ${API}ms`, canvas.width / 2.5, canvas.height / 1.8);
+    ctx.fillText(`API: ${API}ms \n \nrequested by: ${message.author.username}`, canvas.width / 2.5, canvas.height / 1.8);
   
     ctx.beginPath();
     ctx.arc(125, 125, 100, 0, Math.PI * 2, true);
