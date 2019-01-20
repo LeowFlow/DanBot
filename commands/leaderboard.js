@@ -1,7 +1,7 @@
 const fs = require("fs");
 let mlb = JSON.parse(fs.readFileSync("./datajsons/messageleaderboard.json", "utf8"));
 exports.run = async (client, message, args, level) => {
-    message.channel.send("",{
+    message.channel.send("", {
       embed: new Discord.RichEmbed;
       .setTitle("This is the leaderboard command (W.I.P.)")
       .setDescription(mlb[message.author.id].msgs)
