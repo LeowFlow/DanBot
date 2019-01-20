@@ -17,11 +17,10 @@ exports.run = async (client, message, args, color, member) => {
     ctx.font = '28px sans-serif';
     const fonts = ctx.font = '28px sans-serif';
     ctx.fillStyle = '#ffffff';
-    ctx.fillText('Pong,', canvas.width / 2.5, canvas.height / 3.5);
   
     ctx.fillText(canvas, `Latency: ${new Date().getTime() - message.createdTimestamp} ms`);
     ctx.fillStyle = '#ffffff';
-    ctx.fillText(`API: ${API}ms`, canvas.width / 2.5, canvas.height / 1.8);
+    ctx.fillText(`API: ${API}ms \n \n Latency: ${new Date().getTime() - message.createdTimestamp} ms`, canvas.width / 2.5, canvas.height / 1.8);
   
     ctx.beginPath();
     ctx.arc(125, 125, 100, 0, Math.PI * 2, true);
@@ -34,7 +33,7 @@ exports.run = async (client, message, args, color, member) => {
   
     const attachment = new Discord.Attachment(canvas.toBuffer(), 'PONG.png');
   
-    channel.send(`PONG!!`, attachment);  
+    message.channel.send(`PONG!!`, attachment);  
 
 };exports.conf = {
     enabled: true,
