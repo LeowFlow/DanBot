@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 exports.run = (client, message, args) => {
   let user = message.mentions.users.first() || message.author; 
-  if (user.presence.activity !== null && user.presence.activity === 'LISTENING TO SPOTIFY' && user.presence.activity.name === 'Spotify' && user.presence.activity.assets !== null) {
+  if (user.presence.activity !== null && user.presence.activity.state === 'LISTENING' && user.presence.activity.name === 'Spotify' && user.presence.activity.assets !== null) {
     let trackIMG = `https://i.scdn.co/image/${user.presence.activity.assets.largeImage.slice(8)}`;
     let trackURL = `https://open.spotify.com/track/${user.presence.activity.syncID}`;
     let trackName = user.presence.activity.details;
