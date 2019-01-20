@@ -17,6 +17,20 @@ module.exports = async (client, message, guild) => {
   })}
 
 
+  let mlb = require("../datajsons/messageleaderboard.json");
+  if(!mlb[message.author.id]){
+    mlb[message.author.id] = {
+      msgs: 1
+    };
+  }
+  if(coinAmt === baseAmt){
+    coins[message.author.id] = {
+      coins: coins[message.author.id].coins + coinAmt
+    };
+  fs.writeFile("./datajsons/messageleaderboard.json", JSON.stringify(mlb), (err) => {
+    if (err) console.log(err)
+  })}
+
   const sql = require('sqlite3');
   const db = new sql.Database('./database.db');
   if (message.author.bot) return;
