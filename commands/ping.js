@@ -14,10 +14,11 @@ exports.run = async (client, message, args, color) => {
     ctx.strokeRect(0, 0, canvas.width, canvas.height);
   
     ctx.font = '28px sans-serif';
+    const fonts = ctx.font = '28px sans-serif';
     ctx.fillStyle = '#ffffff';
     ctx.fillText('Pong,', canvas.width / 2.5, canvas.height / 3.5);
   
-    ctx.font.basic = applyText(canvas, `Latency: ${new Date().getTime() - message.createdTimestamp} ms`);
+    ctx.font('28px sans-serif') = applyText(canvas, `Latency: ${new Date().getTime() - message.createdTimestamp} ms`);
     ctx.fillStyle = '#ffffff';
     ctx.fillText(`API: ${API}ms`, canvas.width / 2.5, canvas.height / 1.8);
   
