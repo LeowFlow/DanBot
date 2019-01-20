@@ -7,7 +7,7 @@ module.exports = async (client, message, guild) => {
       msgs: 0
     };
   }
-    mlb[message.author.id].coins ++;
+    mlb[message.author.id].msgs ++;
   fs.writeFile("./datajsons/messageleaderboard.json", JSON.stringify(mlb), (err) => {
     if (err) console.log(err)
   })
