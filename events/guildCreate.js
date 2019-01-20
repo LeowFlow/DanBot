@@ -9,7 +9,8 @@ module.exports = (client, guild) => {
     .addField("__**Name:**__", `${guild.name}`)
     .addField("__**Owner:**__", `${guild.owner}`)
     .addField("__**Members:**__", `${guild.memberCount}`)
-    .addField("__**Total Members (All Servers):**__", `${client.guilds.size} servers`)
+    .addField("__**Total Members:**__", `${client.guilds.reduce((p, c) => p + c.memberCount, 0)}`)
+    .addField("__**Total Guilds:**__", `${client.guilds.size}`)
     .setFooter(`The Guilds ID: ${guild.id}`)
     .setTimestamp();
     client.channels.get("536398920348073994").send(guildEmbed);
