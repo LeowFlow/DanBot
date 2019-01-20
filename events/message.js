@@ -1,7 +1,7 @@
 const fs = require("fs");
 module.exports = async (client, message, guild) => { 
 
-  let mlb = require("../datajsons/messageleaderboard.json");
+  let mlb = JSON.parse(fs.readFileSync("./datajsons/messageleaderboard.json", "utf8"));
   if(!mlb[message.author.id]){      
     mlb[message.author.id] = {
       msgs: 0
