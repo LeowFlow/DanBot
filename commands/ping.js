@@ -1,9 +1,10 @@
 const Discord = require("discord.js");
 const ping = require('node-http-ping')
 var datetime = require('node-datetime');
+const snekfetch = require('snekfetch')
 const Canvas = require('canvas')
-exports.run = async (client, message, args, color) => {
-
+exports.run = async (client, message, args, color, member) => {
+  let API = (client.ping).toFixed(2)
 
     const canvas = Canvas.createCanvas(700, 250);
     const ctx = canvas.getContext('2d');
@@ -18,7 +19,7 @@ exports.run = async (client, message, args, color) => {
     ctx.fillStyle = '#ffffff';
     ctx.fillText('Pong,', canvas.width / 2.5, canvas.height / 3.5);
   
-    ctx.font('28px sans-serif') = applyText(canvas, `Latency: ${new Date().getTime() - message.createdTimestamp} ms`);
+    ctx.fillText(canvas, `Latency: ${new Date().getTime() - message.createdTimestamp} ms`);
     ctx.fillStyle = '#ffffff';
     ctx.fillText(`API: ${API}ms`, canvas.width / 2.5, canvas.height / 1.8);
   
