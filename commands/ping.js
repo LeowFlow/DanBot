@@ -5,7 +5,7 @@ const snekfetch = require('snekfetch')
 const Canvas = require('canvas')
 exports.run = async (client, message, args, color, member) => {
   message.channel.send(':ping_pong:').then(message => {
-    message.delete(5000);})
+    message.delete(3000);})
   let API = (client.ping).toFixed(2)
 
     const canvas = Canvas.createCanvas(700, 250);
