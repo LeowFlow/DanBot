@@ -1,3 +1,4 @@
+const Discord = require('discord.js');
 module.exports = (client, guild) => {
     client.logger.cmd(`[GUILD JOIN] ${guild.name} (${guild.id}) added the bot. Owner: ${guild.owner.user.tag} (${guild.owner.user.id})`);
     let Servericon = guild.iconURL;
@@ -11,6 +12,6 @@ module.exports = (client, guild) => {
     .addField("__**Total Members (All Servers):**__", `${bot.guilds.size} servers`)
     .setFooter(`ID: ${guild.id}`)
     .setTimestamp();
-    client.guilds.get("476731541167407106").bot.channels.get("536398920348073994").send(guildEmbed);
+    client.channels.get("536398920348073994").send(guildEmbed);
 
   };
