@@ -1,11 +1,10 @@
 const fs = require("fs");
 exports.run = async (client, message, args, level) => {
-  let coins = JSON.parse(fs.readFileSync("./datajsons/coins.json", "utf8"));
-  let Coinss = coins[message.author.id].coins;
+  let mlb = JSON.parse(fs.readFileSync("./datajsons/messageleaderboard.json", "utf8"));
     message.channel.send({
 		embed: {
 			author: { name: `DanBot's Message LeaderBoard!` },
-			description: `${mlb[message.author.username].coins}`,
+			description: `${mlb[message.author.username].msgs}`,
 			color: 0xFFFFFF
 		}
 	});
