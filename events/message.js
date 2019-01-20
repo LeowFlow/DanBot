@@ -7,24 +7,10 @@ module.exports = async (client, message, guild) => {
       msgs: 0
     };
   }
-    mlb[message.author.id] = {
-      coins: coins[message.author.id].coins + coinAmt
-    };
+    mlb[message.author.id].coins ++;
   fs.writeFile("./datajsons/messageleaderboard.json", JSON.stringify(mlb), (err) => {
     if (err) console.log(err)
-  })}
-
-
-  let mlb = require("../datajsons/messageleaderboard.json");
-  if(!mlb[message.author.id]){
-    mlb[message.author.id] = {
-      msgs: 1
-    };
-  }
-  mlb[message.author.id].msgs ++;
-  fs.writeFile("./datajsons/messageleaderboard.json", JSON.stringify(mlb), (err) => {
-    if (err) console.log(err)
-  })}
+  })
 
   const sql = require('sqlite3');
   const db = new sql.Database('./database.db');
