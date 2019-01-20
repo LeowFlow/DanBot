@@ -4,7 +4,6 @@ var datetime = require('node-datetime');
 const snekfetch = require('snekfetch')
 const Canvas = require('canvas')
 exports.run = async (client, message, args, color, member) => {
-  message.channel.send("Pong please wait.")
   let API = (client.ping).toFixed(2)
 
     const canvas = Canvas.createCanvas(700, 250);
@@ -32,7 +31,7 @@ exports.run = async (client, message, args, color, member) => {
     ctx.drawImage(avatar, 25, 25, 200, 200);
   
     const attachment = new Discord.Attachment(canvas.toBuffer(), 'PONG.png');
-    message.edit(`PONG!!`, attachment);  
+    message.channel.send(`PONG!!`, attachment);  
 
 };exports.conf = {
     enabled: true,
