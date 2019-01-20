@@ -1,5 +1,6 @@
 const fs = require("fs");
 module.exports = async (client, message, guild) => { 
+  let coins = require("../datajsons/coins.json");
   if(!coins[message.author.id]){
     coins[message.author.id] = {
       coins: 0
