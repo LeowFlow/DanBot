@@ -1,7 +1,8 @@
 const fs = require("fs");
 module.exports = async (client, message, guild) => { 
+
   let coins = require("../datajsons/coins.json");
-  if(!coins[message.author.id]){
+  if(!coins[message.author.id]){      
     coins[message.author.id] = {
       coins: 0
     };
@@ -23,10 +24,7 @@ module.exports = async (client, message, guild) => {
       msgs: 1
     };
   }
-  if(coinAmt === baseAmt){
-    coins[message.author.id] = {
-      coins: coins[message.author.id].coins + coinAmt
-    };
+  mlb[message.author.id].msgs ++;
   fs.writeFile("./datajsons/messageleaderboard.json", JSON.stringify(mlb), (err) => {
     if (err) console.log(err)
   })}
