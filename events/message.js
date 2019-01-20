@@ -5,17 +5,15 @@ module.exports = async (client, message, guild) => {
       coins: 0
     };
   }
-
   let coinAmt = Math.floor(Math.random() * 5) + 1;
   let baseAmt = Math.floor(Math.random() * 5) + 1;
-
   if(coinAmt === baseAmt){
     coins[message.author.id] = {
       coins: coins[message.author.id].coins + coinAmt
     };
   fs.writeFile("./datajsons/coins.json", JSON.stringify(coins), (err) => {
     if (err) console.log(err)
-  });
+  })}
 
 
   const sql = require('sqlite3');
