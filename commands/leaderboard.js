@@ -7,6 +7,7 @@ exports.run = async (client, message, args, level) => {
       embed: new Discord.RichEmbed()
       .setTitle("LeaderBoard-W.I.P.")
       .setDescription(message.author.username+"\n"+msgss)
+      .setFooter("Danbot | Leaderboard comming soon.")
     })
   }
     exports.conf = {
